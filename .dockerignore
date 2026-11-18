@@ -1,0 +1,16 @@
+node_modules
+frontend/node_modules
+frontend/dist
+backend/static
+data/
+*.db
+*.sqlite
+__pycache__
+*/__pycache__
+.git
+.gitignore
+.vscode
+.idea
+1_HINH_MAU_UMER
+1_HINH_MAU_UMER.zip
+*.log

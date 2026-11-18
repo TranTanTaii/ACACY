@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: acacy-product-catalog
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persistent storage for SQLite database and extracted product images
+      - ./data:/app/data
+      # Mount Excel files for convenient in-container importing
+      - ./:/app/workspace:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DATA_DIR=/app/data
